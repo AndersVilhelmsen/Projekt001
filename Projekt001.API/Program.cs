@@ -1,3 +1,4 @@
+using Projekt001.Repo;
 using Projekt001.Repo.Interfaces;
 using Projekt001.Repo.Models_DTO_;
 using Projekt001.Repo.Repositories;
@@ -5,7 +6,14 @@ using Projekt001.Repo.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 //builder.Services.AddDbContext<DatabaseContext>();
 
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("personCors",
+        builder =>
+        {
+            builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+        });
+});
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -26,6 +34,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("personCors");
 
 app.UseAuthorization();
 

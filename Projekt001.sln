@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projekt001.API", "Projekt00
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projekt001.Repo", "Projekt001.Repo\Projekt001.Repo.csproj", "{22D56D34-5753-40EF-A103-A7322EBB8022}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project001.Test", "Project001.Test\Project001.Test.csproj", "{A6FCF80A-755C-4C3C-A9F5-31E9CF7A39B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project001.Test", "Project001.Test\Project001.Test.csproj", "{A6FCF80A-755C-4C3C-A9F5-31E9CF7A39B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AngularFrontEnd", "AngularFrontEnd", "{78CC6C17-4BCC-470D-B5EE-A72A00AE7C67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

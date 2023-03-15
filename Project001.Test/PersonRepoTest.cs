@@ -40,7 +40,7 @@ namespace Project001.Test
             // Arrange
             DatabaseContext context = new DatabaseContext(options);
             context.Database.EnsureDeleted();
-            
+
             context.Person.Add(new Person { personId = 1, name = "John", age = 22 });
             context.Person.Add(new Person { personId = 2, name = "Poul", age = 23 });
             context.Person.Add(new Person { personId = 3, name = "George", age = 24 });
@@ -121,8 +121,8 @@ namespace Project001.Test
             // Assert
             Assert.Equal(6, person.personId);
             Assert.Equal("Beatles", person.name);
-            Assert.Equal(26, person.age); 
-            
+            Assert.Equal(26, person.age);
+
         }
 
         [Fact]
@@ -167,8 +167,8 @@ namespace Project001.Test
             context2.Person.Add(new Person { personId = 4, name = "Ringo", age = 25 });
             context2.Person.Add(new Person { personId = 5, name = "John", age = 22 });
             context2.SaveChanges();
-            PersonRepository personRepository = new PersonRepository(context2);            
-            
+            PersonRepository personRepository = new PersonRepository(context2);
+
             // Act
             var result = await personRepository.deletePerson(5);
 

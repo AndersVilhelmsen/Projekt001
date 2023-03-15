@@ -36,7 +36,7 @@ namespace Project001.Test
             context.Car.Add(new Car { carId = 2, brand = "Lade" });
             context.Car.Add(new Car { carId = 3, brand = "Fiat" });
             context.Car.Add(new Car { carId = 4, brand = "Porche" });
-            context.Car.Add(new Car { carId = 5, brand = "Skoda"});
+            context.Car.Add(new Car { carId = 5, brand = "Skoda" });
             context.SaveChanges();
         }
 
@@ -118,7 +118,7 @@ namespace Project001.Test
             context.Car.Add(new Car { carId = 4, brand = "Porche" });
             context.Car.Add(new Car { carId = 5, brand = "Skoda" });
             context.SaveChanges();
-            CarRepository carRepository = new CarRepository(context); Car c = new Car { carId = 0, brand = "BMW"};
+            CarRepository carRepository = new CarRepository(context); Car c = new Car { carId = 0, brand = "BMW" };
             // Act
             var car = await carRepository.createCar(c);
 
@@ -150,9 +150,9 @@ namespace Project001.Test
             // Assert
             Assert.Equal(car2.carId, car.carId);
             Assert.Equal(car2.brand, car.brand);
-            }
+        }
 
-[Fact]
+        [Fact]
         public async Task DeleteCar_CarExists()
         {
             // Arrange
@@ -165,8 +165,8 @@ namespace Project001.Test
             context.Car.Add(new Car { carId = 4, brand = "Porche" });
             context.Car.Add(new Car { carId = 5, brand = "Skoda" });
             context.SaveChanges();
-            CarRepository carRepository = new CarRepository(context);  
-            
+            CarRepository carRepository = new CarRepository(context);
+
             // Act
             var result = await carRepository.deleteCar(5);
 

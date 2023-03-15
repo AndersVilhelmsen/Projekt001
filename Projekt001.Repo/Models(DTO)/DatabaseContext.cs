@@ -6,7 +6,7 @@ namespace Projekt001.Repo
     public class DatabaseContext : DbContext
     {
 
-        public DatabaseContext(DbContextOptions<DatabaseContext> option) : base(option) { }
+        //public DatabaseContext(DbContextOptions<DatabaseContext> option) : base(option) { }
         public DatabaseContext()
         {
 
